@@ -145,7 +145,8 @@ vim.opt.splitbelow = true
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = { tab = '> ', trail = '·', nbsp = '␣', extends = '»', precedes = '«' }
+-- Set 'tab' to two spaces to visually match 'tabstop=2' and 'expandtab'
+vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣', extends = '»', precedes = '«' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'

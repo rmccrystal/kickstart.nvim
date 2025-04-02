@@ -144,9 +144,8 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
--- Set 'tab' to two spaces to visually match 'tabstop=2' and 'expandtab'
-vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣', extends = '»', precedes = '«' }
+vim.opt.list = false
+vim.opt.listchars = { tab = '  ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
@@ -678,8 +677,8 @@ require('lazy').setup({
           settings = {
             ['rust-analyzer'] = {
               checkOnSave = {
-                command = "clippy",
-                extraArgs = {"--all", "--", "-W", "clippy::all"}
+                command = 'clippy',
+                extraArgs = { '--all', '--', '-W', 'clippy::all' },
               },
               diagnostics = {
                 enable = true,
@@ -709,8 +708,8 @@ require('lazy').setup({
                   enable = true,
                 },
               },
-            }
-          }
+            },
+          },
         },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
